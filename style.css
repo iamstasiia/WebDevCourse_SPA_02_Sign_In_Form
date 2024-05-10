@@ -19,8 +19,7 @@
 }
 
 section {
-    border: 1px solid;
-    width: 24rem;
+    min-width: 24rem;
     height: 30rem;
     display: flex;
     flex-direction: column;
@@ -28,6 +27,7 @@ section {
     align-items: center;
     gap: .5rem;
     padding: 2rem 3rem;
+    transition: all .5s;
 }
 
 h1 {
@@ -36,6 +36,7 @@ h1 {
 
 p {
     font-size: .75rem;
+    text-align: center;
 }
 
 button {
@@ -52,16 +53,38 @@ button {
     cursor: pointer;
 }
 
+.container {
+    width: 48rem;
+    height: 30rem;
+    margin: 0 auto;
+}
 
 /* -- Greet -- */
 .greet {
+    width: 24rem;
+    height: 30rem;
     background: var(--color-2);
     color: var(--color-5);
-    text-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;;
+    text-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    position: relative;
+    overflow: hidden;
+    transition: all .5s;
 
-    button {
-        background: transparent;
-        border: 1px solid var(--color-5);
+    section {
+        gap: 2rem;
+        position: absolute;
+
+        button {
+            background: transparent;
+            border: 1px solid var(--color-5);
+        }
+    }
+
+    .greet-in {
+        left: 0;
+    }
+    .greet-up {
+        left: 27rem;
     }
 }
 
@@ -76,7 +99,7 @@ button {
 
 .s-networks {
     margin-bottom: 1.5rem;
-    
+
     i {
         width: 2rem;
         aspect-ratio: 1;
@@ -110,4 +133,12 @@ form {
     a.password-reminder {
         font-size: .85rem;
     }
+}
+
+.move-greet-back {
+    transform: translateX(24rem);
+}
+
+.move-text {
+    transform: translateX(-27rem);
 }
