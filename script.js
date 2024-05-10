@@ -9,4 +9,6 @@ function toggleGreetAnimation() {
     document.getElementById("greet").classList.toggle("move-greet-back");
     document.getElementById("greet-in").classList.toggle("move-text");
     document.getElementById("greet-up").classList.toggle("move-text");
+    document.getElementById("sign-up").classList.toggle("move-sign");
+    document.getElementById("sign-in").classList.toggle("move-sign");
 }
