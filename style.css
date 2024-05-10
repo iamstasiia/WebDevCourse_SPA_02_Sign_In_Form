@@ -19,7 +19,7 @@
 }
 
 section {
-    min-width: 24rem;
+    width: 24rem;
     height: 30rem;
     display: flex;
     flex-direction: column;
@@ -56,7 +56,9 @@ button {
 .container {
     width: 48rem;
     height: 30rem;
-    margin: 0 auto;
+    margin: 3rem auto;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 /* -- Greet -- */
@@ -66,8 +68,10 @@ button {
     background: var(--color-2);
     color: var(--color-5);
     text-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    position: relative;
+    position: absolute;
+    right: 0;
     overflow: hidden;
+    z-index: 2;
     transition: all .5s;
 
     section {
@@ -81,16 +85,31 @@ button {
     }
 
     .greet-in {
-        left: 0;
+        left: -27rem;
     }
+
     .greet-up {
-        left: 27rem;
+        left: 0;
     }
 }
 
 
 /* -- Entry -- */
 .entry {
+    z-index: 1;
+
+    .sign-in {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .sign-up {
+        position: absolute;
+        top: 0;
+        right: 3rem;
+    }
+
     button {
         background: var(--color-2);
         box-shadow: inset rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
@@ -136,9 +155,13 @@ form {
 }
 
 .move-greet-back {
-    transform: translateX(24rem);
+    transform: translateX(-24rem);
 }
 
 .move-text {
-    transform: translateX(-27rem);
+    transform: translateX(27rem);
+}
+
+.move-sign {
+    transform: translateX(3rem);
 }
