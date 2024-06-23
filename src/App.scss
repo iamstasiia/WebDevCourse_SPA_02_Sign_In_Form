@@ -14,3 +14,15 @@ $color-shadow: rgba($color-1, 0.15);
     font-family: 'Montserrat', sans-serif;
     color: $color-1;
 }
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    text-align: center;
+    padding: 5rem 0;
+}
