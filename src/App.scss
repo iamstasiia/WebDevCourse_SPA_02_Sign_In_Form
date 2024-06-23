@@ -1,0 +1,16 @@
+@import url(https://fonts.bunny.net/css?family=montserrat:300,400,600,800);
+
+$color-1: #131112;
+$color-2: #00838F;
+$color-3: #00BCD4;
+$color-4: #FFEB3A;
+$color-5: #9E9E9E;
+$color-6: #707070;
+$color-7: #EDEDED;
+$color-shadow: rgba($color-1, 0.15);
+
+:root {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    color: $color-1;
+}

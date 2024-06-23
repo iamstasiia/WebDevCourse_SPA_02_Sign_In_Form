@@ -1,0 +1,164 @@
+@import "../../App.scss";
+
+.form-container {
+    width: 48rem;
+    height: 30rem;
+    margin: 4rem auto;
+    position: relative;
+    box-shadow: $color-shadow 0px 4px 12px;
+
+    section {
+        width: 24rem;
+        height: 30rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 2rem 3rem;
+        transition: all 0.5s;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 0.75rem;
+            text-align: center;
+        }
+
+        a {
+            color: $color-1;
+        }
+
+        .s-networks {
+            margin: 0.5rem 0 1.5rem;
+
+            a {
+                width: 2.25rem;
+                aspect-ratio: 1;
+                display: inline-block;
+                text-align: center;
+                align-content: center;
+                border-radius: 50%;
+                border: 1px solid $color-7;
+                box-shadow: $color-shadow 1.95px 1.95px 2.6px;
+                margin: 0 1rem;
+                transition: all 0.5s;
+
+                &:hover {
+                    background: $color-4;
+                }
+            }
+        }
+
+        form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+
+            input {
+                width: 100%;
+                background: $color-7;
+                padding: 0.75rem;
+
+                &:focus {
+                    outline: none;
+                    box-shadow: inset $color-shadow 1.25px 1.25px 4px;
+                }
+            }
+
+            a.password-reminder {
+                font-size: 0.85rem;
+            }
+        }
+    }
+
+    button {
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 0.75rem 3rem;
+        border-radius: 2rem;
+        text-shadow: $color-shadow 1.95px 1.95px 2.6px;
+        
+        cursor: pointer;
+    }
+
+    // Greet
+    .greet {
+        background: $color-2;
+        width: 24rem;
+        height: 30rem;
+        color: $color-7;
+        text-shadow: $color-shadow 1.95px 1.95px 2.6px;
+        position: absolute;
+        right: 0;
+        overflow: hidden;
+        z-index: 2;
+        transition: all 0.5s;
+
+        section {
+            gap: 2rem;
+            position: absolute;
+        }
+
+        button {
+            color: $color-7;
+            border: 1px solid $color-7;
+            transition: all 0.5s;
+
+            &:hover {
+                background: $color-7;
+                color: $color-2;
+            }
+        }
+
+        .greet-in {
+            left: -27rem;
+        }
+
+        .greet-up {
+            left: 0;
+        }
+    }
+
+    // Entry
+    .entry {
+        z-index: 1;
+
+        .sign-in {
+            position: absolute;
+            left: 0;
+        }
+
+        .sign-up {
+            position: absolute;
+            right: 3rem;
+        }
+
+        button {
+            font-size: 0.75rem;
+            background: $color-4;
+            box-shadow: inset $color-shadow 1.95px 1.95px 2.6px;
+
+            &:hover {
+                box-shadow: $color-shadow 1.95px 1.95px 2.6px;
+            }
+        }
+    }
+}
+
+// Movement of sections
+.move-greet {
+    transform: translateX(-24rem);
+}
+
+.move-text {
+    transform: translateX(27rem);
+}
+
+.move-sign {
+    transform: translateX(3rem);
+}
